@@ -1,11 +1,11 @@
 
-require 'creek'
+require 'simple_xlsx_reader'
 
 # ============================================
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = Creek::Book.new './sample_excel_files/sample_excel_file.xlsx'
+workbook = SimpleXlsxReader.open './sample_excel_files/sample_excel_file.xlsx'
 
 worksheets = workbook.sheets
 puts "Found #{worksheets.count} worksheets"
@@ -15,11 +15,11 @@ worksheets.each do |worksheet|
   num_rows = 0
 
   worksheet.rows.each do |row|
-    row_cells = row.values
+    row_cells = row
     num_rows += 1
 
     # uncomment to print out row values
-    # puts row_cells.join " "
+    # puts row_cells.join ' '
   end
   puts "Read #{num_rows} rows"
 end

@@ -10,10 +10,16 @@ GEM
     roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
+    ruby-ole (1.2.12)
     rubyXL (3.3.23)
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.1.6)
     rubyzip (1.2.1)
+    simple_xlsx_reader (1.0.2)
+      nokogiri
+      rubyzip
+    spreadsheet (1.1.4)
+      ruby-ole (>= 1.0)
 
 PLATFORMS
   ruby
@@ -22,6 +28,8 @@ DEPENDENCIES
   creek
   roo
   rubyXL
+  simple_xlsx_reader
+  spreadsheet
 
 BUNDLED WITH
    1.14.5

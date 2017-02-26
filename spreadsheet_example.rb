@@ -1,13 +1,14 @@
 
-require 'creek'
+require 'spreadsheet'
 
 # ============================================
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = Creek::Book.new './sample_excel_files/sample_excel_file.xlsx'
+# Note: spreadsheet only supports .xls files (not .xlsx)
+workbook = Spreadsheet.open './sample_excel_files/sample_xls_excel_file.xls'
 
-worksheets = workbook.sheets
+worksheets = workbook.worksheets
 puts "Found #{worksheets.count} worksheets"
 
 worksheets.each do |worksheet|
@@ -15,7 +16,7 @@ worksheets.each do |worksheet|
   num_rows = 0
 
   worksheet.rows.each do |row|
-    row_cells = row.values
+    row_cells = row.to_a.map{ |v| v.methods.include?(:value) ? v.value : v }
     num_rows += 1
 
     # uncomment to print out row values
