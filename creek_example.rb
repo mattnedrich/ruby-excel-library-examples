@@ -5,7 +5,7 @@ require 'creek'
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = Creek::Book.new './sample_excel_files/sample_excel_file.xlsx'
+workbook = Creek::Book.new './sample_excel_files/xlsx_500_rows.xlsx'
 
 worksheets = workbook.sheets
 puts "Found #{worksheets.count} worksheets"

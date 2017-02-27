@@ -6,7 +6,7 @@ require 'spreadsheet'
 # ============================================
 
 # Note: spreadsheet only supports .xls files (not .xlsx)
-workbook = Spreadsheet.open './sample_excel_files/sample_xls_excel_file.xls'
+workbook = Spreadsheet.open './sample_excel_files/xls_500_rows.xls'
 
 worksheets = workbook.worksheets
 puts "Found #{worksheets.count} worksheets"

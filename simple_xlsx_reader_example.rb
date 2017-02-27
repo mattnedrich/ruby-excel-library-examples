@@ -5,7 +5,7 @@ require 'simple_xlsx_reader'
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = SimpleXlsxReader.open './sample_excel_files/sample_excel_file.xlsx'
+workbook = SimpleXlsxReader.open './sample_excel_files/xlsx_500000_rows.xlsx'
 
 worksheets = workbook.sheets
 puts "Found #{worksheets.count} worksheets"

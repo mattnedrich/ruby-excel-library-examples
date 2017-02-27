@@ -5,7 +5,7 @@ require 'rubyXL'
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = RubyXL::Parser.parse './sample_excel_files/sample_excel_file.xlsx'
+workbook = RubyXL::Parser.parse './sample_excel_files/xlsx_500_rows.xlsx'
 
 worksheets = workbook.worksheets
 puts "Found #{worksheets.count} worksheets"

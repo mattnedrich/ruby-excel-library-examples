@@ -1,11 +1,10 @@
-
 require 'roo'
 
 # ============================================
 # ===========   Read Example   ===============
 # ============================================
 
-workbook = Roo::Spreadsheet.open './sample_excel_files/sample_excel_file.xlsx'
+workbook = Roo::Spreadsheet.open './sample_excel_files/xlsx_500_rows.xlsx'
 
 worksheets = workbook.sheets
 puts "Found #{worksheets.count} worksheets"
