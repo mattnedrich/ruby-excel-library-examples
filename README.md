@@ -5,7 +5,7 @@ This project contains sample code for reading Excel files with different Ruby li
 Below are code samples for reading current OOXML Excel files using [**rubyXL**](https://github.com/weshatheleopard/rubyXL), [**roo**](https://github.com/roo-rb/roo), [**creek**](https://github.com/pythonicrubyist/creek), and [**simple_xlsx_reader**](https://github.com/woahdae/simple_xlsx_reader).
 
 ### [rubyXL](https://github.com/weshatheleopard/rubyXL)
-```
+```ruby
 require 'rubyXL'
 
 workbook = RubyXL::Parser.parse './sample_excel_files/xlsx_500_rows.xlsx'
@@ -29,7 +29,7 @@ end
 puts 'Done'
 ```
 ### [roo](https://github.com/roo-rb/roo)
-```
+```ruby
 require 'roo'
 
 workbook = Roo::Spreadsheet.open './sample_excel_files/xlsx_500_rows.xlsx'
@@ -53,7 +53,7 @@ end
 puts 'Done'
 ```
 ### [creek](https://github.com/pythonicrubyist/creek)
-```
+```ruby
 require 'creek'
 
 workbook = Creek::Book.new './sample_excel_files/xlsx_500_rows.xlsx'
@@ -77,7 +77,7 @@ end
 puts 'Done'
 ```
 ### [simple_xlsx_reader](https://github.com/woahdae/simple_xlsx_reader)
-```
+```ruby
 require 'simple_xlsx_reader'
 
 workbook = SimpleXlsxReader.open './sample_excel_files/xlsx_500000_rows.xlsx'
@@ -105,7 +105,7 @@ puts 'Done'
 Below are code samples for reading legacy Excel files using [**spreadsheet**](https://github.com/zdavatz/spreadsheet)
 
 ### [spreadsheet](https://github.com/zdavatz/spreadsheet)
-```
+```ruby
 require 'spreadsheet'
 
 # Note: spreadsheet only supports .xls files (not .xlsx)
